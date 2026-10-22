@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="kk" data-theme="paper">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Өзбекәлі және Мәдени майдан — Кітап</title>
+<meta name="description" content="Өзбекәлі және Мәдени майдан. Іздеу, бетбелгі және оқу орнын сақтау мүмкіндігі бар жайлы электронды кітап.">
+<meta name="theme-color" content="#203c36"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#reader">Мәтінге өту</a>
+<div class="shade" id="shade" hidden></div>
+<aside class="sidebar" id="sidebar" aria-label="Кітап мазмұны">
+ <a class="brand" href="#page=3" aria-label="Кітаптың басына өту"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 8c-4-3-9-3-13-1v19c4-2 9-2 13 1m0-19c4-3 9-3 13-1v19c-4-2-9-2-13 1V8Z" stroke="currentColor" stroke-width="1.7"/></svg><span>Кітап<span class="brand-dot">.</span></span></a>
+ <div class="side-book"><img src="cover.webp" alt="Өзбекәлі және Мәдени майдан кітабының мұқабасы" width="62" height="92"><div><strong>Өзбекәлі және<br>Мәдени майдан</strong><small>С. Керімбай · Ә. Нәби</small><span class="edition">5-басылым · 2024</span></div></div>
+ <div class="side-tabs" role="tablist" aria-label="Навигация"><button id="tocTab" class="active" role="tab" aria-selected="true">Мазмұн</button><button id="savedTab" role="tab" aria-selected="false">Бетбелгілер <span id="savedCount">0</span></button></div>
+ <nav class="chapters" id="chapters" aria-label="Тараулар"><div class="side-loading">Мазмұн жүктелуде…</div></nav>
+ <div class="side-bottom"><div class="side-progress"><span>Оқу барысы</span><strong id="sidePercent">0%</strong></div><div class="progress-track"><i id="sideProgress"></i></div><p id="sidePage">351 беттік кітап</p><form class="jump-form" id="jumpForm"><label for="pageInput">Бетке өту</label><input type="number" id="pageInput" min="1" max="351" value="3" aria-label="Бет нөмірі"><button aria-label="Таңдалған бетке өту">↗</button></form><small class="save-note"><span></span> Оқу орныңыз осы браузерде сақталады</small></div>
+</aside>
+<div class="workspace">
+ <header class="topbar"><div class="breadcrumb"><button class="icon-button menu-button" id="menuButton" aria-label="Мазмұнды ашу" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><span>ЖЕКЕ ОҚУ КЕҢІСТІГІ</span><i></i><span class="crumb-book">Өзбекәлі</span></div><div class="tools"><button class="tool-button" id="searchButton" aria-label="Кітаптан іздеу"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><span>Іздеу</span><kbd>/</kbd></button><button class="icon-button aa" id="settingsButton" aria-label="Оқу баптаулары" aria-expanded="false">Aa</button><button class="icon-button" id="themeButton" aria-label="Түнгі режимге ауысу"><svg viewBox="0 0 24 24"><path d="M20.5 14A8.8 8.8 0 0 1 10 3.5a9 9 0 1 0 10.5 10.5Z"/></svg></button></div></header>
+ <div class="reading-progress" aria-hidden="true"><i id="topProgress"></i></div>
+ <main id="reader" tabindex="-1">
+  <section class="book-intro" id="bookIntro"><div class="intro-text"><span class="eyebrow">ОТБАСЫ ХРЕСТОМАТИЯСЫ</span><h1>Өзбекәлі <em>және</em><br>Мәдени майдан</h1><p class="authors">С. Керімбай · Ә. Нәби</p><div class="book-meta"><span>351 цифрлық бет</span><b>·</b><span>Қазақша</span><b>·</b><span>Алматы, 2024</span></div></div><div class="cover-wrap"><img src="cover.webp" alt="Кітап мұқабасы" width="152" height="225"><span></span></div></section>
+  <div class="resume-banner" id="resumeBanner" hidden><div><small>ҚОШ КЕЛДІҢІЗ</small><p id="resumeText">Оқуды тоқтаған жеріңізден жалғастырыңыз.</p></div><button id="resumeButton">Жалғастыру <span>→</span></button></div>
+  <div class="page-top"><div><span class="eyebrow" id="sectionLabel">КІТАПТЫҢ БАСЫ</span><h2 id="sectionTitle">Алғысөз</h2></div><button id="bookmarkButton" class="icon-button bookmark" aria-label="Осы бетке бетбелгі қою" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></button></div>
+  <div class="mode-row"><div class="mode-tabs" aria-label="Оқу түрі"><button id="textMode" class="active" aria-pressed="true">Мәтін</button><button id="scanMode" aria-pressed="false">Түпнұсқа</button></div><span class="page-label" id="pageLabel">3 / 351 бет</span></div>
+  <article class="book-text" id="bookText" aria-label="Кітап мәтіні"><div class="loading-state"><span class="loading-dot"></span><p>Кітап ашылуда…</p></div></article>
+  <div class="scan-view" id="scanView" hidden><img id="scanImage" alt="Кітаптың түпнұсқа беті"><p>Масштабты өзгерту үшін суретті басыңыз.</p></div>
+  <div class="source-note" id="sourceNote"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5"/><path d="M10 9v5m0-8v.2"/></svg><span>Мәтін сканнан танылды. Күмәнді сөзді «Түпнұсқа» режимінде тексеруге болады.</span></div>
+  <nav class="page-navigation" aria-label="Беттер бойынша ауысу"><button id="prevButton"><span>←</span><div><small>АЛДЫҢҒЫ</small><strong>Алдыңғы бет</strong></div></button><div class="page-position"><span id="bottomPage">3</span><small>/ 351</small></div><button id="nextButton"><div><small>КЕЛЕСІ</small><strong>Келесі бет</strong></div><span>→</span></button></nav>
+  <footer class="reader-footer"><span>Асықпай оқыңыз. Ойға уақыт беріңіз.</span><span>← → <span class="desktop-hint">пернелерімен ауысу</span></span></footer>
+ </main>
+</div>
+<div class="settings-panel" id="settingsPanel" hidden><div class="popover-heading"><strong>Өзіңізге ыңғайлаңыз</strong><button class="icon-button" id="closeSettings" aria-label="Баптауларды жабу">×</button></div><label>Қаріп өлшемі</label><div class="size-control"><button id="smallerFont" aria-label="Қаріпті кішірейту">A−</button><span id="fontValue">22 px</span><button id="largerFont" aria-label="Қаріпті үлкейту">A+</button></div><label for="fontFamily">Қаріп</label><select id="fontFamily"><option value="serif">Кітап қарпі</option><option value="sans">Қарапайым қаріп</option></select><label for="lineSpacing">Жол аралығы</label><select id="lineSpacing"><option value="1.7">Ықшам</option><option value="1.9" selected>Қалыпты</option><option value="2.2">Кең</option></select><label>Бет түсі</label><div class="theme-options"><button data-theme-choice="paper" class="theme-paper" aria-label="Ақшыл режим">Ақшыл</button><button data-theme-choice="sepia" class="theme-sepia" aria-label="Сарғыш режим">Сарғыш</button><button data-theme-choice="dark" class="theme-dark" aria-label="Түнгі режим">Түнгі</button></div></div>
+<dialog id="searchDialog"><div class="search-head"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="searchInput" type="search" placeholder="Кітаптан сөз немесе сөйлем іздеу…" aria-label="Іздеу сөзі" autocomplete="off"><button id="closeSearch" aria-label="Іздеуді жабу">Esc</button></div><div class="search-info" id="searchInfo">Кітаптың барлық 351 бетінен іздеңіз.</div><div class="search-results" id="searchResults"></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+</body></html>
